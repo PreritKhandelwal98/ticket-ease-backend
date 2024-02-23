@@ -15,4 +15,8 @@ router.post('/register', async (req, res) => {
   }
 });
 
+router.get('/',(req,resp)=>{
+  resp.send("This api is working correctly on this port")
+})
+
 module.exports = router;

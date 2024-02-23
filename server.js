@@ -3,13 +3,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const registrationRoutes = require('./routes/registrationRoutes');
-
+const cors = require('cors')
 const app = express();
 const PORT = process.env.PORT || 7120;
 
 // Middleware
 app.use(express.json());
-
+app.use(cors());
 // Routes
 app.use('/api', registrationRoutes);
 
